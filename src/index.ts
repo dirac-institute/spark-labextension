@@ -35,7 +35,7 @@ const extension: JupyterFrontEndPlugin<void> = {
       label: 'Application UI', 
       execute: args => {
         // define the url to access
-        const url = 'https://localhost:4040/jobs/';
+        const url = 'https://hub.dirac.astro.washington.edu/user/stevenstetzler/proxy/4040/jobs/';
         // make an IFrame to capture the content of the url
         let content = new IFrame();
         content.url = url;
