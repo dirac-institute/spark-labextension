@@ -35,7 +35,7 @@ const extension: JupyterFrontEndPlugin<void> = {
       label: 'Application UI', 
       execute: args => {
         // define the url to access
-        const url = 'http://localhost:4040/jobs/';
+        const url = 'https://localhost:4040/jobs/';
         // make an IFrame to capture the content of the url
         let content = new IFrame();
         content.url = url;
@@ -53,7 +53,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     })
 
     async function fetch_content() {
-      const url = 'http://localhost:8888/k8s';
+      const url = 'https://localhost:8888/k8s';
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
@@ -178,7 +178,7 @@ const extension: JupyterFrontEndPlugin<void> = {
 
     sparkMenu.addItem({ command: "ui:open" });
     sparkMenu.addItem({ command: "ui:k8s:open" });
-    mainMenu.addMenu(sparkMenu, { rank: 70 });
+    mainMenu.addMenu(sparkMenu, { rank: 110 });
   }
 };
 
