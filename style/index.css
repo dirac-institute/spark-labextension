@@ -1,0 +1,9 @@
+.k8s-widget {
+    overflow: auto;
+    padding: 20px;
+}
+  
+.k8s-message {
+    padding-left: 20px;
+    padding-right: 20px;
+}
